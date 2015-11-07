@@ -21,3 +21,5 @@
 
 en:
   hello: "Hello world"
+  app_title: "Artbid"
+  app_tagline: "The Auction site for Art lovers"
