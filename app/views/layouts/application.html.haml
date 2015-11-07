@@ -1,0 +1,9 @@
+!!!
+%html
+  %head
+    %title Artbay
+    = stylesheet_link_tag    'application', media: 'all' => true
+    = javascript_include_tag 'application' => true
+    = csrf_meta_tags
+  %body
+    = yield
