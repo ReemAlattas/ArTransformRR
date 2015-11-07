@@ -8,6 +8,6 @@ RSpec.describe 'WelcomeController' do
     it { should have_selector('header h1', text: I18n.t('app_title')) }
     it { should have_selector('header span.tagline',
                               text: I18n.t('app_tagline')) }
-    #it { should have_title(full_title) }
+    it { should have_title(full_title) }
   end
 end
