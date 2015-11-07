@@ -18,8 +18,8 @@ RSpec.describe LayoutHelper do
 
   describe '#title' do
     it 'creates a content_for title with the content passed in' do
-      helper.title('Blah blah lol man')
-      expect(helper.content_for(:page_title)).to eq('Blah lol wtf')
+      helper.title('lol')
+      expect(helper.content_for(:page_title)).to eq('lol')
     end
   end
 end
