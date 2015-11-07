@@ -5,8 +5,9 @@ RSpec.describe 'WelcomeController' do
     subject { page }
     before { visit root_path }
 
-    it { should have_selector('header h1', text: 'Artbid') }
-    it { should have_selector('header span.tagline', text: 'The Auction site for the Artists') }
-    it { should have_title('ArtBid - Auction site for Art lovers') }
+    it { should have_selector('header h1', text: I18n.t('app_title')) }
+    it { should have_selector('header span.tagline',
+                              text: I18n.t('app_tagline')) }
+    #it { should have_title(full_title) }
   end
 end
