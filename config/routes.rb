@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   get 'welcome/index'
   root 'welcome#index'
+  
+  get 'items' => 'items#show'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
