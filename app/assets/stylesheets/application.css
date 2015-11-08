@@ -7485,6 +7485,14 @@ ul.callbacks_tabs.callbacks1_tabs {
   background: #ec4f4b;
   padding: 1em 0em 1em 0em;
 }
+.copyright2 {
+  background: #ec4f4b;
+  padding: 1em 0em 1em 0em;
+  position:absolute;
+   bottom:0;
+   width:100%;
+   height:60px;
+}
 .copy-left p {
   font-size: 1em;
   font-weight: 400;
