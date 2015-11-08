@@ -12,7 +12,7 @@ class CreateSoldArtworks < ActiveRecord::Migration
       t.string :shipping_city
       t.string :shipping_state
       t.integer :shipping_zipcode
-      t.country :shipping_country
+      t.string :shipping_country
 
       t.timestamps null: false
     end
