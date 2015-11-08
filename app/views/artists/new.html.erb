@@ -1,2 +1,56 @@
-<h1>Artists#new</h1>
-<p>Find me in app/views/artists/new.html.erb</p>
+<%= form_for @artwork do |f| %>
+ 
+  <% if @artwork.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@artwork.errors.count, "error") %> prohibited
+        this artwork info from being saved:
+      </h2>
+      <ul>
+        <% @artwork.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <p>
+    <%= f.label :title %><br>
+    <%= f.string_field :title %>
+  </p>
+ 
+  <p>
+    <%= f.label :artist %><br>
+    <%= f.string_area :artist %>
+  </p>
+
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </p>
+
+  <p>
+    <%= f.label :media %><br>
+    <%= f.string_field :media %>
+  </p>
+
+  <p>
+    <%= f.label :date_made %><br>
+    <%= f.date_field :date_made %>
+  </p>
+
+  <p>
+    <%= f.label :dimension %><br>
+    <%= f.string_field :dimension%>
+  </p>
+
+  <p>
+    <%= f.label :suggest_price %><br>
+    <%= f.float_field :suggest_price %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+ 
+<% end %>

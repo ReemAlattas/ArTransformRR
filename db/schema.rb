@@ -11,18 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151108003233) do
+ActiveRecord::Schema.define(version: 20151108024106) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "artists", force: :cascade do |t|
     t.string   "name"
+    t.string   "email"
     t.string   "tagline"
-    t.text     "artwork_summary"
+    t.text     "artworks_summary"
     t.string   "professional_organization"
-    t.text     "exhibit_history"
-    t.text     "award_history"
+    t.text     "exhibits_history"
+    t.text     "awards_history"
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
   end
@@ -37,6 +38,32 @@ ActiveRecord::Schema.define(version: 20151108003233) do
     t.float    "suggest_price"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+  end
+
+  create_table "bids", force: :cascade do |t|
+    t.integer  "artwork_id"
+    t.integer  "user_id"
+    t.float    "bid_amount"
+    t.date     "bid_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "sold_artworks", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "artwork_id"
+    t.float    "pay_amount"
+    t.string   "pay_method"
+    t.date     "pay_date"
+    t.float    "shipping_cost"
+    t.string   "shipping_method"
+    t.string   "shipping_street"
+    t.string   "shipping_city"
+    t.string   "shipping_state"
+    t.integer  "shipping_zipcode"
+    t.string   "shipping_country"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
   create_table "users", force: :cascade do |t|

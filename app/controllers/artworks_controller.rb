@@ -1,49 +1,49 @@
 class ArtworksController < ApplicationController
   def index
-    @articles = Article.all
+    @artwork = Artwork.all
   end
  
   def show
-    @article = Article.find(params[:id])
+    @artword = Artwork.find(params[:id])
   end
  
   def new
-    @article = Article.new
+    @artwork = Artwork.new
   end
  
   def edit
-    @article = Article.find(params[:id])
+    @artwork = Artwork.find(params[:id])
   end
  
   def create
-    @article = Article.new(article_params)
+    @artwork = Artwork.new(artwork_params)
  
-    if @article.save
-      redirect_to @article
+    if @artwork.save
+      redirect_to @artwork
     else
       render 'new'
     end
   end
  
   def update
-    @article = Article.find(params[:id])
+    @artwork = Artwork.find(params[:id])
  
-    if @article.update(article_params)
-      redirect_to @article
+    if @artwork.update(artwork_params)
+      redirect_to @artwork
     else
       render 'edit'
     end
   end
  
   def destroy
-    @article = Article.find(params[:id])
-    @article.destroy
+    @artwork = Artwork.find(params[:id])
+    @artwork.destroy
  
-    redirect_to articles_path
+    redirect_to artwork_path
   end
  
   private
-    def article_params
-      params.require(:article).permit(:title, :text)
+    def artwork_params
+      params.require(:artwork).permit(:title, :artist, :description, :media, :date_made, :dimension, :suggest_price)
     end
 end
