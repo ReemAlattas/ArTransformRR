@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'welcome/index'
   root 'welcome#index'
   
+  post 'bid' => 'page#auction'
   get 'items' => 'items#show'
 
   # Example of regular route:

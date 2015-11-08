@@ -1,5 +1,7 @@
 <!-- header -->
-<div class="header">
+
+<%= javascript_include_tag('app/assets/javascripts/controller.js') %>
+<div class="header" ng-app="artApp">
 	<div class="container">
 		<div class="header-main">
 			<div class="logo">
@@ -44,19 +46,19 @@
 
 <!-- content -->
 
-<div class="container-fluid">
+<div class="container-fluid" ng-controller="mycontroller">
   <div class="row">
   	<div class="col-md-4"><%= image_tag "g4-.jpg" %></div>
   	<div class="col-md-8">
   		<div class="services-top">
-				<h3>Title</h3>
+				<h3>Title 2</h3>
 		</div>
 		<div class="caption">
 			<label>Time left:</label><p style="color: red">11 min!</p>
 			<label>Current bid:</label><p>$ 1,000,000</p>
 			<form>
-				<label>Your bid:</label><input type="text" style="width:100px" class="form-control"><br>
-				<input id="submit" name="submit" type="submit" value="Place Bid" class="btn btn-primary"><br><br>
+				<label>Your bid:</label><input type="text" class="form-control" model="bid"> 
+				<input id="submit" name="submit" type="submit" value="Place Bid" class="btn btn-primary">
 			</form>
 		</div>
 
@@ -68,7 +70,7 @@
 
 <!-- footer -->
 
-	<div id="footer" class="copyright2">
+	<div id="footer" class="copyright">
 	<div class="container">
 		<div class="copy-main">
 			<div class="copy-left">
