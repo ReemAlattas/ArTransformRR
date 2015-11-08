@@ -1,49 +1,49 @@
 class UsersController < ApplicationController
   def index
-    @articles = Article.all
+    @users = Users.all
   end
  
   def show
-    @article = Article.find(params[:id])
+    @User = User.find(params[:id])
   end
  
   def new
-    @article = Article.new
+    @user = User.new
   end
  
   def edit
-    @article = Article.find(params[:id])
+    @user = User.find(params[:id])
   end
  
   def create
-    @article = Article.new(article_params)
+    @user = User.new(user_params)
  
-    if @article.save
-      redirect_to @article
+    if @user.save
+      redirect_to @user
     else
       render 'new'
     end
   end
  
   def update
-    @article = Article.find(params[:id])
+    @user = User.find(params[:id])
  
-    if @article.update(article_params)
-      redirect_to @article
+    if @user.update(user_params)
+      redirect_to @user
     else
       render 'edit'
     end
   end
  
   def destroy
-    @article = Article.find(params[:id])
-    @article.destroy
+    @user = User.find(params[:id])
+    @user.destroy
  
-    redirect_to articles_path
+    redirect_to users_path
   end
  
   private
-    def article_params
-      params.require(:article).permit(:title, :text)
+    def user_params
+      params.require(:user).permit(:name, :email, :type, :password)
     end
 end
