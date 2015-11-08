@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  artwork_id: 1
+  pay_amount: 1.5
+  pay_method: MyString
+  pay_date: 2015-11-07
+  shipping_cost: 1.5
+  shipping: 
+  shipping_street: MyString
+  shipping_addres_city: MyString
+  shipping_state: MyString
+  shipping: 
+
+two:
+  user_id: 1
+  artwork_id: 1
+  pay_amount: 1.5
+  pay_method: MyString
+  pay_date: 2015-11-07
+  shipping_cost: 1.5
+  shipping: 
+  shipping_street: MyString
+  shipping_addres_city: MyString
+  shipping_state: MyString
+  shipping: 

@@ -5,7 +5,7 @@ class CreateArtworks < ActiveRecord::Migration
       t.integer :artist_id
       t.text :description
       t.string :media
-      t.date :artwork_made
+      t.date :date_made
       t.string :dimension
       t.float :suggest_price
 

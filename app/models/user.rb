@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
 	has_many :artists, through: :artworks
 	has_many :artworks
 	has_many :bids
+	has_many :sold_artwork
 
 	before_save { self.email = email.downcase }
 	validates :name,  presence: true, length: { maximum: 50 }
