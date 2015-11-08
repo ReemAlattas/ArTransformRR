@@ -47,6 +47,7 @@ RSpec.describe User do
   it { should validate_length_of(:username).is_at_least(6).is_at_most(30) }
   it { should validate_presence_of(:username) }
   it { should validate_uniqueness_of(:username) }
+  it { should have_many(:auctions).dependent(:destroy) }
 
   describe '#email=' do
     let(:user) { User.new }
