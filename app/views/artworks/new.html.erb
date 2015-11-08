@@ -1,13 +1,13 @@
-<%= form_for :article, url: articles_path do |f| %>
+<%= form_for @artwork do |f| %>
  
-  <% if @article.errors.any? %>
+  <% if @artwork.errors.any? %>
     <div id="error_explanation">
       <h2>
-        <%= pluralize(@article.errors.count, "error") %> prohibited
-        this article from being saved:
+        <%= pluralize(@artwork.errors.count, "error") %> prohibited
+        this artwork info from being saved:
       </h2>
       <ul>
-        <% @article.errors.full_messages.each do |msg| %>
+        <% @artwork.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
         <% end %>
       </ul>
@@ -20,8 +20,33 @@
   </p>
  
   <p>
-    <%= f.label :text %><br>
-    <%= f.text_area :text %>
+    <%= f.label :artist_id %><br>
+    <%= f.text_field :artist_id %>
+  </p>
+
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </p>
+
+  <p>
+    <%= f.label :media %><br>
+    <%= f.text_field :media %>
+  </p>
+
+  <p>
+    <%= f.label :date_made %><br>
+    <%= f.date_field :artwork_made %>
+  </p>
+
+  <p>
+    <%= f.label :dimension %><br>
+    <%= f.text_field :dimension%>
+  </p>
+
+  <p>
+    <%= f.label :suggest_price %><br>
+    <%= f.number_field :suggest_price %>
   </p>
  
   <p>
@@ -29,5 +54,5 @@
   </p>
  
 <% end %>
- 
-<%= link_to 'Back', articles_path %>
+
+<%= link_to 'Back', artworks_path %>

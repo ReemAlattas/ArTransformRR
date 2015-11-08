@@ -1,49 +1,49 @@
 class ArtistsController < ApplicationController
   def index
-    @articles = Article.all
+    @artists = Artists.all
   end
  
   def show
-    @article = Article.find(params[:id])
+    @artist = artist.find(params[:id])
   end
  
   def new
-    @article = Article.new
+    @artist = Artist.new
   end
  
   def edit
-    @article = Article.find(params[:id])
+    @artist = Artist.find(params[:id])
   end
  
   def create
-    @article = Article.new(article_params)
+    @artist = Artist.new(artist_params)
  
-    if @article.save
-      redirect_to @article
+    if @artist.save
+      redirect_to @artist
     else
       render 'new'
     end
   end
  
   def update
-    @article = Article.find(params[:id])
+    @artist = Artist.find(params[:id])
  
-    if @article.update(article_params)
-      redirect_to @article
+    if @artist.update(artist_params)
+      redirect_to @artist
     else
       render 'edit'
     end
   end
  
   def destroy
-    @article = Article.find(params[:id])
-    @article.destroy
+    @artist = Artist.find(params[:id])
+    @artist.destroy
  
-    redirect_to articles_path
+    redirect_to artists_path
   end
  
   private
-    def article_params
-      params.require(:article).permit(:title, :text)
+    def artist_params
+      params.require(:artist).permit(:name, :email, :tagline, :artworks_summary, :professional_organization, :exhibits_history,:awards_history)
     end
 end

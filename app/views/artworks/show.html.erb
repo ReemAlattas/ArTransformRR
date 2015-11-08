@@ -1,0 +1,27 @@
+<h1>Listing artworks</h1>
+ 
+<table>
+  <tr>
+    <th>Title</th>
+    <th>artist_id </th>
+    <th>description</th>
+    <th>media</th>
+    <th>date made</th>
+    <th>dimension</th>
+    <th>suggest price</th>
+  </tr>
+    <tr>
+      <td><%= @artwork.title %></td>
+      <td><%= @artwork.artist_id %></td>
+      <td><%= @artwork.description %></td>
+      <td><%= @artwork.media %></td>
+      <td><%= @artwork.artwork_made %></td>
+      <td><%= @artwork.dimension %></td>
+      <td><%= @artwork.suggest_price %></td>
+      </tr>
+
+</table>
+
+<%= link_to 'Back to Arworks', artworks_path %>
+<%= link_to "New Artwork", new_artwork_path %>
+  
