@@ -1,0 +1,7 @@
+- title(@auction.title)
+%main{role: 'main'}
+  %header
+    %h1= @auction.title
+  .auction-bid-box
+    %span.current-bid= number_to_currency(@auction.current_price)
+  .auction-description= @auction.description
