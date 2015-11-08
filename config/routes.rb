@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :artists
+  get 'artists/new'
+
   resources :artworks
   get 'artworks/new'
 

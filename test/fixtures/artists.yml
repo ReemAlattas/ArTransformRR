@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  tagline: MyString
+  artwork_summary: MyText
+  professional_organization: MyString
+  exhibit_history: MyText
+  award_history: MyText
+
+two:
+  name: MyString
+  tagline: MyString
+  artwork_summary: MyText
+  professional_organization: MyString
+  exhibit_history: MyText
+  award_history: MyText
