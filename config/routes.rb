@@ -2,7 +2,11 @@ Rails.application.routes.draw do
   get 'welcome/index'
   root 'welcome#index'
   
+  post 'bid' => 'page#auction'
   get 'items' => 'items#show'
+  get 'paint2' => 'items#paint2'
+  get 'paint3' => 'items#paint3'
+  get 'paint4' => 'items#paint4'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
