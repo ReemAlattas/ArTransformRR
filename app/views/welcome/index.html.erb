@@ -1,0 +1,190 @@
+<!-- header -->
+<div class="header">
+	<div class="container">
+		<div class="header-main">
+			<div class="logo">
+				<a href="index.html"> <%= image_tag "logo.png" %> </a>
+			</div>
+			<div class="head-right">
+			  <div class="top-nav">
+					<span class="menu"> <%= image_tag "icon.png" %></span>
+				<ul class="res">
+					<li><a class="active" href="index.html">Home</a></li>
+					<li><a href="index.html#auction">Auction</a></li>
+					<li><a href="index.html#contact">Contact</a></li>
+				<div class="clearfix"> </div>
+				</ul>
+			 </div>
+		    
+				
+			<div class="search-box">
+				<div id="sb-search" class="sb-search">
+					<form>
+						<input class="sb-search-input" placeholder="Search" type="search" name="search" id="search">
+						<input class="sb-search-submit" type="submit" value="">
+						<span class="sb-icon-search"> </span>
+					</form>
+			   </div>
+			</div>
+			<div class="clearfix"> </div>
+			   <!-- search-scripts -->
+			   <script src="js/classie.js"></script>
+					<script src="js/uisearch.js"></script>
+						<script>
+							new UISearch( document.getElementById( 'sb-search' ) );
+						</script>
+			  <!-- //search-scripts -->
+		</div>
+		
+		<div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+<!-- header -->
+    
+<!-- banner -->
+<div class="banner">
+	<div class="container">
+		<div class="banner-main">
+			<!-- -->
+		</div>
+	</div>
+</div>
+<div class="banner-strip">
+	<div class="container">
+		<h2>The Ultimate Online Arts Auction!</h2>
+	   <div class="clearfix"> </div>
+	</div>
+</div>
+<!-- banner --> 
+    
+<!-- Featured -->
+<div class="services" id="auction">
+	<div class="container">
+		<div class="services-main">
+			<div class="services-top">
+				<h3>Featured</h3>
+			</div>
+			<div class="services-bottom">
+				<div class="row">
+					  <div class="col-sm-6 col-md-6 ser">
+					<div class="thumbnail">
+					  <a href="/items"><%= image_tag "g2-.jpg" %></a>
+					  <div class="caption">
+					    <a href="#"><h3>Praesentium voluptatum</h3></a>
+					    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+					  </div>
+					</div>
+					  </div>
+					   <div class="col-sm-6 col-md-6 ser">
+					<div class="thumbnail">
+					  <a href="#"><%= image_tag "g3-.jpg" %></a>
+					  <div class="caption">
+					   <a href="#"> <h3>Accusantium doloremque</h3></a>
+					    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+					  </div>
+					</div>
+					  </div>
+					   <div class="col-sm-6 col-md-6 ser">
+					<div class="thumbnail">
+					  <a href="#"><%= image_tag "g4-.jpg" %></a>
+					  <div class="caption">
+					    <a href="#"><h3>Thumbnail label</h3></a>
+					    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+					  </div>
+					</div>
+					  </div>
+				  <div class="col-sm-6 col-md-6 ser">
+					<div class="thumbnail">
+					  <a href="#"><%= image_tag "g5-.jpg" %></a>
+					  <div class="caption">
+					    <a href="#"><h3>Thumbnail label</h3></a>
+					    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+					  </div>
+					</div>
+					  </div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Featured -->
+    
+<!-- banner strip -->
+
+    <div class="banner-strip">
+	<div class="container">
+		<h2>Art is a Scream of Freedom</h2>
+	   <div class="clearfix"> </div>
+	</div>
+    </div>
+    
+<!-- banner strip -->
+
+<!-- Contact -->
+    
+<!-- Contact -->
+    <div class="contact" id="contact">
+    <div class="container">
+        <div class="contact-top">
+				<h3>Contact</h3>
+			</div>
+    <form class="form-horizontal" role="form" method="post" action="index.php">
+    <div class="form-group">
+        <label for="name" class="col-sm-2 control-label">Name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="name" name="name" placeholder="First & Last Name" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="email" class="col-sm-2 control-label">Email</label>
+        <div class="col-sm-10">
+            <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="message" class="col-sm-2 control-label">Message</label>
+        <div class="col-sm-10">
+            <textarea class="form-control" rows="4" name="message"></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="human" class="col-sm-2 control-label">2 + 3 = ?</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="human" name="human" placeholder="Your Answer">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-10 col-sm-offset-2">
+            <input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-10 col-sm-offset-2">
+            <!-- Will be used to display an alert to the user -->
+        </div>
+    </div>
+</form>
+</div>
+        </div>
+<!-- footer -->
+
+	<div class="copyright">
+	<div class="container">
+		<div class="copy-main">
+			<div class="copy-left">
+				<p>© 2015 ArTransform</p>
+			</div>
+			<div class="copy-right"> 
+				<ul>
+					<li><a class="active" href="index.html">Home</a></li>|
+					<li><a href="index.html#auction">Auction</a></li>|
+					<li><a href="index.html#contact">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- footer -->

@@ -9,6 +9,7 @@
     <th>date made</th>
     <th>dimension</th>
     <th>suggest</th>
+     <th colspan="2"></th>
   </tr>
  
   <% @artworks.each do |artwork| %>
@@ -20,6 +21,8 @@
       <td><%= artwork.artwork_made %></td>
       <td><%= artwork.dimension %></td>
       <td><%= artwork.suggest_price %></td>
+      <td><%= link_to 'Show', artwork_path(artwork) %></td>
+      <td><%= link_to 'Edit', edit_artwork_path(artwork) %></td>
       </tr>
   <% end %>
 </table>

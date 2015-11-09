@@ -11,11 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20151108024106) do
+=======
+ActiveRecord::Schema.define(version: 0) do
+>>>>>>> 63dedf9a42f2109488092f3c2f2113416a0634c3
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+<<<<<<< HEAD
   create_table "artists", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
@@ -76,4 +81,6 @@ ActiveRecord::Schema.define(version: 20151108024106) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
+=======
+>>>>>>> 63dedf9a42f2109488092f3c2f2113416a0634c3
 end
