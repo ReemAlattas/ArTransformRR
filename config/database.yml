@@ -1,5 +1,5 @@
 default: &default
-  adapter: sqlite3-ruby
+  adapter: postgresql
   encoding: unicode
   pool: 5
 
